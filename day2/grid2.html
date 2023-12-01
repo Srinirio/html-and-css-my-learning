@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout div{
+            background-color: pink;
+            border: 1px solid black;
+            font-size: 2em;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+        }
+        .layout{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20vh 60vh 20vh ;
+            grid-template-areas: "h h h"
+            "sd1 m sd2"
+            "f f f";
+        }
+        .header{
+            grid-area: h;
+        }
+        .side1{
+            grid-area: sd1;
+        }
+        .side2{
+            grid-area: sd2;
+        }
+        .main-content{
+            grid-area: m;
+        }
+        .footer{
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">header</div>
+        <div class="side1">side1</div>
+        <div class="main-content">main-content</div>
+        <div class="side2">side2</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+html
+1.mdn - for reference
+2.w3c html - to validate
+
+<a href="" target="_blank"> click me</a>
+<a href="https:" target="_blank" type="link" title="go to mozilla .com">Mozilla.com</a>
+
+* to go parent directory use (/)
+
+*<img src="img/download.jpg" alt="images" loading="lazy" title="some content about image" width="100" heigth="100">
+use <figure> tag to image
+-----------------------------
+-----form-----
+<form action="/html/home.html">
+        
+        <!-- for text -->
+       <label for="userName"> User Name: </label>
+       <input type="text" name="userName" id="userName" required minlength="5" maxlength="8" value="srini"> <br><br>
+
+        <!-- for number -->
+       <label for="number">Number</label>
+       <input type="number" name="number" id="number" min="1" max="10" required> <br><br>
+
+        <!-- for date -->
+       <label for="date">Date</label>
+       <input type="date" name="date" id="date" required> <br><br>
+
+        <!-- for checkbox -->
+        <input type="checkbox" name="smsAlert" id="smsAlert">
+        <label for="smsAlert">smsAlert</label> <br><br>
+
+        <!-- for radio -->
+        <label>Gender</label><br>
+        <!-- In radio we should give value attribut-->
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label> <br><br>
+        
+        <!-- for dropdown -->
+        <select name="state" id="state" multiple>
+            <option value="tamilnadu">tamilnadu</option>
+            <option value="tamil1nadu">tamil1nadu</option>
+            <option value="tamil2nadu">tamil2nadu</option> 
+        </select><br><br>
+
+       <button>Submit</button>
+       <button type="reset">Reset</button>
+    </form>
+ 
+
+css
+
+----there are three types of css 
+
+*internal css
+*external css
+*inline css
+
+----types of selector
+
+
+*id selector
+*universal selector
+*class selector
+*element selector
+
+<div>
+<p>para</p>
+<a>link</a>   
+</div>
+
+to access the first child element
+div>p{
+
+}
+
+to access the all child element
+
+div p{
+
+}
+
+--------FONT--------
+
+h1{
+font-family: Arial,"","";
+font-size: 1em;
+font-weight:normal,medium,bold;
+text-transform:capitalize; in this property we can change upcase downcase
+text-decoration:none;
+letter-spacing:.5em;
+word-spacing:.5em;
+text-align:center; to make center,left,rigth
+ 
+}
+
+p{
+line-height:1.5em;
+text-align:jusify; to make the para neat
+text-indent:50px; make space for start of the paragraph
+text-shadow:2px 2px 2px gray;
+}
+
+to make starting letter fo para big  
+p:first-line{
+font-size:2em;
+}
+
+to change link color for anchor tag
+
+a:visited{
+   color:green; after visited the tag the link become green
+}
+
+a:hover{  //active,link,focus- used for touch-screen 
+color:red;
+}
+
+p[class]{ us attribute eruka [class name any thing]
+
+}
+
+p[id='nme']{
+
+}
+
+----------------BOX css------------------
+box-sizing:border-box;
+-----------------------------------------
+
+if we have list
+
+<ul>
+<li>home</li>
+<li>home</li>
+<li>home</li>
+</ul>
+
+to display in single line
+
+li{
+display:inline;
+}
+
+---------styling list and table
+ul{
+list-style-type:none,square,circle; 
+list-style-position:outside,inside;
+}
+
+
+-----------TABLE----------
+
+table{
+    width: 50%;
+    height: 100%;
+    margin: auto; /* to make center the table*/
+}
+table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 10px;
+}
+
+------------style form-----------
+
+............position for box................
+
+h1{
+//static
+position:static; one by one in normal form --its default
+
+//relative
+position:relative; it move from its original position
+top: 10px;
+left: 30px;
+
+//absolute
+position:absolute; change from non-static 
+top:10px;
+
+//fixed
+postion:fixed; it change from root and it fixed in the screen
+
+//sticky
+postion:sticky
+top:0px;
+bottom:0px;
+}
+
+////float
+
+.float div{
+        width: 300px;
+        float: left;
+       }
+
+--------------flexbox----------
+display: flex; one by one horizontaly
+display: inline-flex; content
+flex-direction: row-reverse;
+flex-direction: column;
+flex-wrap: wrap; if decrease the screen size it wrap the box into nextline
+---gap--
+
+justify-content: space-around;
+justify-content: space_evently;
+
+align-items: center;
+
+align-content: center;
+
+----------------grid-----------------
+
+container{
+diaplay:grid;
+grid-templete-colums: 1fr 1fr 1fr; minmax(100px,1fr) 1fr 1fr; repeat(3,1fr);
+%%%%%%%%%%%%%%repate(auto-fit,minmax(200px,1fr));
+
+column-gap: 20px;
+row-gap:20px;
+}
+-----------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout div{
+            background-color: pink;
+            border: 1px solid black;
+            font-size: 2em;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+        }
+        .layout{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20vh 60vh 20vh ;
+            grid-template-areas: "h h h"
+            "sd1 m sd2"
+            "f f f";
+        }
+        .header{
+            grid-area: h;
+        }
+        .side1{
+            grid-area: sd1;
+        }
+        .side2{
+            grid-area: sd2;
+        }
+        .main-content{
+            grid-area: m;
+        }
+        .footer{
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">header</div>
+        <div class="side1">side1</div>
+        <div class="main-content">main-content</div>
+        <div class="side2">side2</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
+-----------------------------
+
+
+1.https://coolors.co/
+
+2.pexels
+
+3.font awesome
+
+--------------units and values---------------
+1.) do use pixels like this 28Px this is call absulte (if the client change the letter to small it not change the size) --- it is not perfered 
+Relative length units
+
+for FONT we use rem = root px * child valuue | ex: 2rem|
+
+2.) 40ch used for character length for <p>,h> like  
+
+3.) if you use vm-view point width (may be we have two scroll point right anf\d down)
+
+
+JAVASCRIPT
+
+Math.floor(Math.rondom()*10)
+
+prompt-alert-confirm --- TO GET USER INPUT USING POPUP
+
+
+

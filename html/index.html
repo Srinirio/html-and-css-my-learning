@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>MY FIRST</title>
+        <link rel="icon" href="images.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <h1>HELLO WORLD </h1>
+        <a href="#sp">sp</a>
+        <section>
+            <ol>
+                <li>game</li>
+                <li>watching movie</li>
+                <li>playing</li>
+            </ol>
+        </section>
+        <section>
+            <ul>
+                <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">w3school</a>
+                <li>php</li>
+                <li>java</li>
+                <li>python</li>
+            </ul>
+        </section>
+        <section>
+            <dl>
+                <dt id="sp">sports</dt>
+                <dd>i love playing sports</dd>
+            </dl>
+        </section>
+        <img src="img/download.jpg" alt="images" loading="lazy">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Seeni</td>
+                    <td>srinirio@gmail.com</td>
+                    <td>6383962706</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+           <tr>
+            <th>Name</th>
+            <td>Seeni</td>
+           </tr>
+           <tr>
+            <th>Email</th>
+            <td>Srini@gmail.com</td>
+           </tr>
+           <tr>
+            <th>Phone</th>
+            <td>6383962706</td>
+           </tr>
+        </table>
+        <article>
+            <h2>Fill the form</h2>
+                <form>
+                  <p>
+                    <label for="firstName">firstName:</label>
+                    <input name="firstName" id="firstName" type="text" placeholder="Enter you name" autocomplete="on">
+                  </p>
+                  <p>
+                    <label for="lastName">lastName:</label>
+                    <input name="lastName" id="lastName" type="text" placeholder="Enter you name" autocomplete="on">
+                  </p>
+                  <p>
+                    <label for="PhoneNumber">Phone Number:</label>
+                    <input name="PhoneNumber" id="PhoneNumber" type="tel" placeholder="999999999" >
+                  </p>
+                  <p>
+                    <label for="favouriteNum">Favourite Number:</label>
+                    <input name="favouriteNum" id="favouriteNum" type="number" placeholder="999999999" min="0" max="100" value="0">
+                  </p>
+                  <p>
+                    <label for="course">Course</label>
+                    <select name="course" id="course">
+                        <option value="AI">AI</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">backend</option>
+                    </select>
+                  </p>
+                </form>
+        </article>
+    </body>
+</html>
